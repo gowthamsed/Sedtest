@@ -17,4 +17,4 @@ jobs:
 workflows:
   test-workflow:
     jobs:
-      - run-sedstart-cloud
+      - run-sedstart-local-mac

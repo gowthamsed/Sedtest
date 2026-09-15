@@ -1,23 +1,20 @@
 version: 2.1
  
 orbs:
-  cicd: sedstart/cicd@1.0.1
- 
+  cicd: sedstart/cicd@dev:1
 jobs:
-  run-sedstart-local-mac:
-    macos:
-      xcode: 16.4.0
-    resource_class: m4pro.medium
+  run-sedstart-cloud:
+    docker:
+      - image: cimg/node:25.2.1
     steps:
-      - checkout
-      - sedstart/runlocal:
-          api_key: SEDSTART_API_KEY
-          project_id: 1262
-          test_id: 11580
-          profile_id: 2227
-          browser: "webkit"
- 
+      - cicd/runcloud:    
+          api_key: SEDSTART_API_KEY     
+          project_id: 198
+          test_id: 774
+          profile_id: 36
+          browser: chrome
+          headless: true
 workflows:
   test-workflow:
     jobs:
-      - run-sedstart-local-mac
+      - run-sedstart-cloud

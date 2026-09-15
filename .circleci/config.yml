@@ -1,7 +1,7 @@
 version: 2.1
  
 orbs:
-  sedstart: sedstart/cicd@dev:1
+  cicd: sedstart/cicd@1.0.1
  
 jobs:
   run-sedstart-local-mac:

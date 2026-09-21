@@ -1,9 +1,9 @@
 version: 2.1
  
 orbs:
-  cicd: sedstart/cicd@1.0.0
+  cicd: sedstart/cicd@1.0.1
 jobs:
-  run-sedstart-cloud:
+  run-sedstart-local-mac:
     docker:
       - image: cimg/node:25.2.1
     steps:

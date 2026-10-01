@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   cicd: sedstart/cicd@1.0.1
 jobs:
-  run-sedstart-cloud:
+  run-sedstart-local-linux:
     docker:
       - image: cimg/node:25.2.1
     steps:
@@ -17,4 +17,4 @@ jobs:
 workflows:
   test-workflow:
     jobs:
-      - run-sedstart-cloud
+      - run-sedstart-local-linux
